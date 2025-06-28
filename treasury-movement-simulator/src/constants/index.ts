@@ -4,6 +4,8 @@ import {
   ArrowRightLeft,
 } from 'lucide-react';
 import { ISidebarItem } from '@/interfaces';
+import { Account } from '@/interfaces';
+import { Transaction } from '@/interfaces';
 
 
 export const items: ISidebarItem[] = [

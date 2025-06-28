@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from '@/components/Layouts/sidebar'
 import Table from '@/components/common/Table'
-import TTableColumn from '@/components/common/Table'
+import { TTableColumn } from '@/interfaces'
 
 
 type TData = {
@@ -13,52 +13,31 @@ type TData = {
 
 
 
-const index = () => {
-  const columnProperties: Array<TTableColumn<TData>> = [
+const Index = () => {
+  const columns: TTableColumn<TData>[] = [
     {
       id: "id",
       label: "Customer ID",
-      setContent(data: TData): React.ReactNode {
-        return <span>{data.id}</span>;
-      },
-      align: "left",
+      setContent: (data) => <span>{data.id}</span>,
     },
-
     {
       id: "name",
-      label: "Customer Name",
-      setContent(data: TData): React.ReactNode {
-        return <span>{data.name}</span>;
-      },
-      align: "left",
-    },
-
-    {
-      id: "currency",
-      label: "Currency",
-      setContent(data: TData): React.ReactNode {
-        return <span>{data.currency}</span>;
-      },
-      align: "left",
-    },
-
-    {
-      id: "balance",
-      label: "Balance",
-      setContent(data: TData): React.ReactNode {
-        return <span>{data.balance}</span>;
-      },
-      align: "left",
+      label: "Name",
+      setContent: (data) => <span>{data.name}</span>,
     },
   ];
+
+  // Empty placeholder data (can be replaced later)
+  const data: TData[] = [];
+
   return (
     <div className="min-h-screen flex bg-gray-50">
       <Sidebar />
-      <div className="flex flex-col items-mt-5">
-        <Table columns ={columnProperties} />
+      <div className="flex flex-col mt-5 w-full p-6">
+        <Table columns={columns} data={data} isloading={false} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default index;
+export default Index;
