@@ -12,7 +12,7 @@ type TData = {
 }
 
 
-const customerData:TData =  [()]
+const customerData:TData =  []
 const index = () => {
   const columnProperties: Array<TTableColumn<TData>> = [
     {

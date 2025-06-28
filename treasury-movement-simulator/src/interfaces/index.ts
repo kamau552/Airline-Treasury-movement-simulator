@@ -17,7 +17,6 @@ export interface TableProps<TData> {
   data: Array<TData>;
   columns: Array<TTableColumn<TData>>
   align?: "left" | "center" | "right" | "justify"
-  width: string;
 }
 
 // Define TData as a generic type parameter for TTableColumn

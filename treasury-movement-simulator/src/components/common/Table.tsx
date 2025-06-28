@@ -1,7 +1,11 @@
 import React from "react";
 import { TableProps } from "@/interfaces";
 
-const Table = <TData,>({ isloading, data, columns }: TableProps<TData>) => {
+function Table<TData>({
+  isloading,
+  data,
+  columns,
+}: TableProps<TData>): JSX.Element {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-x-auto">
       <table className="min-w-full text-sm text-left text-gray-800">
@@ -37,6 +41,15 @@ const Table = <TData,>({ isloading, data, columns }: TableProps<TData>) => {
                 Loading...
               </td>
             </tr>
+          ) : !Array.isArray(data) || data.length === 0 ? (
+            <tr>
+              <td
+                colSpan={columns.length}
+                className="py-4 text-center text-gray-400"
+              >
+                No data found.
+              </td>
+            </tr>
           ) : (
             data.map((row, index) => (
               <tr
@@ -46,7 +59,12 @@ const Table = <TData,>({ isloading, data, columns }: TableProps<TData>) => {
                 } hover:bg-gray-100 transition-colors`}
               >
                 {columns.map((column) => {
-                  const { id, setContent, align = "left", ...props } = column;
+                  const {
+                    id,
+                    setContent,
+                    align = "left",
+                    ...props
+                  } = column;
                   return (
                     <td
                       key={id.toString()}
@@ -69,7 +87,8 @@ const Table = <TData,>({ isloading, data, columns }: TableProps<TData>) => {
         </tbody>
       </table>
     </div>
-  )
+  );
 }
 
 export default Table;
+
