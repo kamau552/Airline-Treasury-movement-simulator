@@ -2,7 +2,7 @@ import React, { useState, useMemo } from "react";
 import { FX_RATES } from "@/constants";
 import Table from "@/components/common/Table";
 import { TTableColumn } from "@/interfaces";
-import FxRatesView from "../components/Views/FxRatesView";
+
 
 const FXRatesPage = () => {
   const fxData = useMemo(

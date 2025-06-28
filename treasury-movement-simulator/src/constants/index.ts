@@ -1,11 +1,10 @@
 import {
-  Search,
   UsersRound,
   Tickets,
   ArrowRightLeft,
 } from 'lucide-react';
-import { ISidebarItem } from './interface';
-import path from 'path';
+import { ISidebarItem } from '@/interfaces';
+
 
 export const items: ISidebarItem[] = [
 
