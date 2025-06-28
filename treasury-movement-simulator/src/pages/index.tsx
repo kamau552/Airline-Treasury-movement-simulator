@@ -11,7 +11,7 @@ type TData = {
   balance: number;
 }
 
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const customerData:TData =  []
 const index = () => {
   const columnProperties: Array<TTableColumn<TData>> = [
