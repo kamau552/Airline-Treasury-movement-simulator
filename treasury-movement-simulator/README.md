@@ -5,6 +5,14 @@ This project simulates treasury fund movements across regional airline operation
 
 ---
 
+## 🧰 Tech Stack
+
+- **🟦 TypeScript** – for strict type safety and scalable interfaces  
+- **⚡ Next.js** – for fast, SSR-enabled React development  
+- **🎨 Tailwind CSS** – for rapid and responsive UI styling  
+
+---
+
 ## 📌 Product Requirements
 
 ### 1. Accounts Interface
@@ -53,7 +61,7 @@ This project simulates treasury fund movements across regional airline operation
 
 ---
 
-## 🧱 Tech Stack & Features Implemented
+## 🧱 Features Implemented
 
 | Feature                         | Status        |
 |----------------------------------|----------------|
@@ -81,4 +89,3 @@ This project simulates treasury fund movements across regional airline operation
 > _Modern dashboard with collapsible sidebar, summary cards, responsive tables, and search functionality._
 
 ---
-
