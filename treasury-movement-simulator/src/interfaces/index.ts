@@ -16,12 +16,12 @@ export interface TableProps<TData> {
   isloading: boolean;
   data: Array<TData>;
   columns: Array<TTableColumn<TData>>
-  align?: "left" | "center" | "right" | "justify"
 }
 
 // Define TData as a generic type parameter for TTableColumn
 export interface TTableColumn<TData = unknown> {
   id: string;
   label: string;
+  align?: "left" | "center" | "right" | "justify"
   setContent: (data: TData, index?: number) => React.ReactNode;
 }

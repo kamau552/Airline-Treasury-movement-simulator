@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { items } from "@/constants";
-import { ISidebarItem } from "@/interface";
+import { ISidebarItem } from "@/interfaces";
 import { usePathname, useRouter } from "next/navigation";
 import Sidebarsearch from "../common/sidebarsearch";
 

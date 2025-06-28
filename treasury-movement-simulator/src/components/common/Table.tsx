@@ -5,7 +5,7 @@ function Table<TData>({
   isloading,
   data,
   columns,
-}: TableProps<TData>): JSX.Element {
+}: TableProps<TData>):  React.ReactElement {
   return (
     <div className="bg-white rounded-xl shadow-md overflow-x-auto">
       <table className="min-w-full text-sm text-left text-gray-800">
